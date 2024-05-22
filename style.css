@@ -6,21 +6,22 @@
 
 :root {
  --primary-color: #813fff;
+ --primary-hover: #c8b8e6;
+ --primary-text-hover: #cecdd0;
  --secondary-color: #9e7aff;
- 
+ --background: #e2d3ff;
  --primary-icon-color: ;
- --primary-text: #eaeaea;
+ --primary-white: #eaeaea;
 }
 
 ::placeholder {
- color: var(--primary-text);
+ color: var(--primary-white);
 }
 
 .loading-page {
  position: relative;
  height: 90vh;
  width: 100%;
- opacity: 1;
 }
 
 .brand-icon {
@@ -66,13 +67,72 @@ footer {
 }
 
 .search {
- width: 70%;
+ width: 65%;
  display: flex;
- padding: 5px 15px;
+ padding: 5px 10px;
  align-items: center;
  border-radius: 10px;
  font-family: Helvetica;
  justify-content: space-around;
+ background-color: var(--secondary-color);
+}
+
+#more-options {
+ padding: 5px;
+ border-radius: 10px;
+ color: var(--primary-white);
+ background-color: var(--secondary-color);
+}
+
+.container-option-search {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ display: none;
+ visibility: hidden;
+ height: calc(100% + 75px);
+ background-color: var(--background);
+}
+
+.container-option-search.active {
+ display: block;
+ visibility: visible;
+}
+
+.container-option-search .wrapper-box-options {
+ top: 12%;
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ border-top: 3px solid var(--primary-color);
+}
+
+.container-option-search .wrapper-box-options .box-options {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: .3s ease-in-out;
+ padding: 15px 20px 10px 20px;
+ justify-content: space-between;
+ border-bottom: 2px solid var(--secondary-color);
+}
+
+.container-option-search .wrapper-box-options .box-options:hover {
+ color: var(--primary-white);
+ background-color: var(--primary-hover);
+}
+
+.container-option-search .wrapper-box-options .box-options .option-text {
+ font-size: 16px;
+ font-weight: 500;
+}
+
+.container-option-search .wrapper-box-options .box-options .icon {
+ color: var(--primary-white);
+ font-size: 20px;
+ padding: 7px;
+ border-radius: 50%;
  background-color: var(--secondary-color);
 }
 
@@ -82,15 +142,15 @@ footer {
 }
 
 .search .icon {
- color: var(--primary-text);
+ color: var(--primary-white);
 }
-
 
 .search .input {
  outline: none;
  border: none;
  width: 70%;
- color: var(--primary-text);
+ font-size: 15px;
+ color: var(--primary-white);
  background-color: var(--secondary-color);
 }
 
@@ -103,7 +163,7 @@ footer {
 
 .cta-btn .icon {
  font-size: 23px;
- color: var(--primary-text);
+ color: var(--primary-white);
 }
 .container-category, .container-models {
  display: flex;
@@ -123,7 +183,7 @@ footer {
  letter-spacing: 3px;
  border-radius: 10px;
  font-family: Sans-Serif;
- color: var(--primary-text);
+ color: var(--primary-white);
  background-color: var(--secondary-color);
 }
 

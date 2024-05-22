@@ -13,6 +13,7 @@
   </div>
   <div class="main-page">
    <div class="wrapper-search">
+    <ion-icon class="icon" name="ellipsis-vertical" id="more-options" onclick="moreOptions()"></ion-icon>
     <div class="search">
     <ion-icon class="icon" name="search"></ion-icon>
     <input placeholder="Search Product" class="input" type="text"/>
@@ -20,6 +21,30 @@
     </div>
     <ion-icon class="icon" name="bag"></ion-icon>
     <ion-icon class="icon" name="chatbubble-ellipses-outline"></ion-icon>
+   </div>
+   <div class="container-option-search">
+    <div class="wrapper-box-options">
+     <div class="box-options">
+      <p class="option-text">Diskon 50%</p>
+      <ion-icon name="shirt" class="icon"></ion-icon>
+     </div>
+     <div class="box-options">
+      <p class="option-text">Women's Blouses</p>
+      <ion-icon name="shirt" class="icon"></ion-icon>
+     </div>
+     <div class="box-options">
+      <p class="option-text">Korean Style</p>
+      <ion-icon name="shirt" class="icon"></ion-icon>
+     </div>
+     <div class="box-options">
+      <p class="option-text">Women's Top</p>
+      <ion-icon name="shirt" class="icon"></ion-icon>
+     </div>
+     <div class="box-options">
+      <p class="option-text">Jean's Skirt</p>
+      <ion-icon name="shirt" class="icon"></ion-icon>
+     </div>
+    </div>
    </div>
    <div class="container-models" id="main-models">
     <img src="assets/clothes/models.jpeg" class="models-bg"/>
@@ -98,6 +123,19 @@
   <script>
    const loadingPage = document.querySelector('.loading-page');
    const mainPage = document.querySelector('.main-page');
+   const optionPage = document.querySelector('.container-option-search');
+   
+   const moreOption = document.getElementById('more-options');
+   
+   
+   function moreOptions() {
+    const isArrowBack = moreOption.name === 'arrow-back';
+    moreOption.name = isArrowBack ? 'ellipsis-vertical' : 'arrow-back';
+    
+    optionPage.classList.toggle('active');
+   }
+   
+   
    
    setTimeout(() => {
      mainPage.style.visibility = "visible";
@@ -106,7 +144,7 @@
      mainPage.style.opacity = "1";
      loadingPage.style.opacity = "0";
     }, 300);
-   }, 3000);
+   }, 300);
   </script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
