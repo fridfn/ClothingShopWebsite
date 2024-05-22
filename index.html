@@ -46,6 +46,24 @@
      </div>
     </div>
    </div>
+   <div class="container-page-login">
+    <div class="content-login">
+     <div class="box-brand">
+      <img src="assets/clothes/brand-nobg.png" class="brand-nobg"/>
+     </div>
+     <p class="login-sigin">Log In / Sign in</p>
+     <div class="wrapper-input-number">
+      <ion-icon name="call" class="icon"></ion-icon>
+      <input placeholder="Masuk dengan no ponsel" class="input-number"/>
+     </div>
+     <p class="login-sigin">atau login dengan yang lain</p>
+     <div class="box-other-login">
+      <ion-icon name="logo-google" class="icon"></ion-icon>
+      <ion-icon name="logo-facebook" class="icon"></ion-icon>
+      <ion-icon name="logo-twitter" class="icon"></ion-icon>
+     </div>
+    </div>
+   </div>
    <div class="container-models" id="main-models">
     <img src="assets/clothes/models.jpeg" class="models-bg"/>
    </div>
@@ -115,7 +133,7 @@
    <div class="cta-btn">
     <ion-icon name="notifications" class="icon"></ion-icon>
    </div>
-   <div class="cta-btn">
+   <div class="cta-btn" onclick="openLoginPage()">
     <ion-icon name="person" class="icon"></ion-icon>
    </div>
   </footer>
@@ -124,6 +142,7 @@
    const loadingPage = document.querySelector('.loading-page');
    const mainPage = document.querySelector('.main-page');
    const optionPage = document.querySelector('.container-option-search');
+   const loginPage = document.querySelector('.container-page-login');
    
    const moreOption = document.getElementById('more-options');
    
@@ -135,6 +154,11 @@
     optionPage.classList.toggle('active');
    }
    
+   
+   function openLoginPage() {
+    loginPage.classList.toggle('actives');
+    console.log(loginPage)
+   }
    
    
    setTimeout(() => {

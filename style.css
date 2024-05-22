@@ -255,3 +255,102 @@ footer {
 #models2 {
  top: -50px;
 }
+
+
+ 
+.container-page-login {
+ position: fixed;
+ width: 100%;
+ top: 0;
+ z-index: 10;
+ display: none;
+ visibility: hidden;
+ align-items: center;
+ border: 2px solid blue;
+ justify-content: center;
+ height: calc(100% + 50px);
+ background-color: var(--background);
+}
+
+.container-page-login.actives {
+ visibility: visible;
+ display: flex;
+ }
+
+.container-page-login .content-login {
+ display: flex;
+ gap: 20px;
+ width: 100%;
+ align-items: center;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.container-page-login .content-login .box-brand {
+ position: relative;
+ width: 200px;
+ height: 100px;
+}
+
+.container-page-login .content-login .box-brand .brand-nobg {
+ position: absolute;
+ object-fit: contain;
+ width: 100%;
+ height: 100%;
+}
+.container-page-login .content-login .wrapper-input-number {
+ width: auto;
+ opacity: .7;
+ height: auto;
+ display: flex;
+ padding: 7px 15px;
+ border-radius: 10px;
+ align-items: center;
+ transition: .3s ease-in-out;
+ justify-content: space-between;
+ background-color: var(--secondary-color);
+ box-shadow: -2px 4px 0px var(--primary-color);
+}
+
+.container-page-login .content-login .wrapper-input-number:hover {
+ background-color: #9e7affc5;
+ box-shadow: -2px 4px 0px #4d229e;
+}
+
+.container-page-login .content-login .login-sigin {
+ color: var(--primary-color);
+ font-size: 13px;
+ font-weight: 500;
+ font-family: Helvetica;
+ text-transform: uppercase;
+}
+
+.container-page-login .content-login .wrapper-input-number .icon {
+ font-size: 20px;
+ margin-right: 10px;
+ color: var(--primary-white);
+}
+
+.container-page-login .content-login .box-other-login {
+ display: flex;
+ gap: 25px;
+}
+
+.container-page-login .content-login .box-other-login .icon {
+ font-size: 30px;
+ color: var(--secondary-color);
+}
+
+.container-page-login .content-login .input-number {
+ outline: none;
+ height: 20;
+ width: 90%;
+ border: none;
+ font-size: 15px;
+ color: var(--primary-white);
+ background-color: transparent;
+}
+
+.input-number::placeholder {
+ color: var(--primary-white);
+}
