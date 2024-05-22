@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+  <title>Online Clothing Shop's</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+ </head>
+ <body>
+  <div class="loading-page">
+   <img src="assets/clothes/brand.jpg" class="brand-icon"/>
+  </div>
+  <div class="main-page">
+   <div class="wrapper-search">
+    <div class="search">
+    <ion-icon class="icon" name="search"></ion-icon>
+    <input placeholder="Search Product" class="input" type="text"/>
+    <ion-icon class="icon" name="camera"></ion-icon>
+    </div>
+    <ion-icon class="icon" name="bag"></ion-icon>
+    <ion-icon class="icon" name="chatbubble-ellipses-outline"></ion-icon>
+   </div>
+   <div class="container-models" id="main-models">
+    <img src="assets/clothes/models.jpeg" class="models-bg"/>
+   </div>
+   <div class="container-category">
+    <h1 class="title-category">CATEGORY</h1>
+    <div class="wrapper-category-items">
+     <div class="wrapper-items">
+      <div class="items">
+       <img src="assets/clothes/clothes1.jpg" class="items-image"/>
+      </div>
+      <p class="name-items">Camisoles</p>
+     </div>
+     <div class="wrapper-items">
+      <div class="items">
+       <img src="assets/clothes/clothes2.jpg" class="items-image"/>
+      </div>
+      <p class="name-items">Tops</p>
+     </div>
+     <div class="wrapper-items">
+      <div class="items">
+       <img src="assets/clothes/clothes3.jpg" class="items-image"/>
+      </div>
+      <p class="name-items">Sweaters</p>
+     </div>
+     <div class="wrapper-items">
+      <div class="items">
+       <img src="assets/clothes/clothes4.jpg" class="items-image"/>
+      </div>
+      <p class="name-items">Shorts</p>
+     </div>
+     <div class="wrapper-items">
+      <div class="items">
+       <img src="assets/clothes/clothes5.jpg" class="items-image"/>
+      </div>
+      <p class="name-items">Sleeved</p>
+     </div>
+     <div class="wrapper-items">
+      <div class="items">
+       <img src="assets/clothes/clothes6.jpg" class="items-image"/>
+      </div>
+      <p class="name-items">Dresses</p>
+     </div>
+     <div class="wrapper-items">
+      <div class="items">
+       <img src="assets/clothes/clothes7.jpg" class="items-image"/>
+      </div>
+      <p class="name-items">Pants</p>
+     </div>
+     <div class="wrapper-items">
+      <div class="items">
+       <ion-icon style="font-size: 35px; color: white;" name="ellipsis-horizontal"></ion-icon>
+      </div>
+      <p class="name-items">Others</p>
+     </div>
+    </div>
+   </div>
+   <div class="container-models">
+    <img src="assets/clothes/models2.jpeg" class="models-bg" id="models2"/>
+   </div>
+  <footer>
+   <div class="cta-btn">
+    <ion-icon name="home" class="icon"></ion-icon>
+   </div>
+   <div class="cta-btn">
+    <ion-icon name="sparkles" class="icon"></ion-icon>
+   </div>
+   <div class="cta-btn">
+    <ion-icon name="notifications" class="icon"></ion-icon>
+   </div>
+   <div class="cta-btn">
+    <ion-icon name="person" class="icon"></ion-icon>
+   </div>
+  </footer>
+  </div>
+  <script>
+   const loadingPage = document.querySelector('.loading-page');
+   const mainPage = document.querySelector('.main-page');
+   
+   setTimeout(() => {
+     mainPage.style.visibility = "visible";
+     loadingPage.style.display = "none";
+    setTimeout(() => {
+     mainPage.style.opacity = "1";
+     loadingPage.style.opacity = "0";
+    }, 300);
+   }, 3000);
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ </body>
+</html>
