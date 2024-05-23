@@ -9,7 +9,7 @@
  </head>
  <body>
   <div class="loading-page">
-   <img src="assets/clothes/brand.jpg" class="brand-icon"/>
+   <img src="assets/product/clothes/brand.jpg" class="brand-icon"/>
   </div>
   <div class="main-page">
    <div class="wrapper-search">
@@ -46,69 +46,51 @@
      </div>
     </div>
    </div>
-   <div class="container-page-login">
-    <div class="content-login">
-     <div class="box-brand">
-      <img src="assets/clothes/brand-nobg.png" class="brand-nobg"/>
-     </div>
-     <p class="login-sigin">Log In / Sign in</p>
-     <div class="wrapper-input-number">
-      <ion-icon name="call" class="icon"></ion-icon>
-      <input placeholder="Masuk dengan no ponsel" class="input-number"/>
-     </div>
-     <p class="login-sigin">atau login dengan yang lain</p>
-     <div class="box-other-login">
-      <ion-icon name="logo-google" class="icon"></ion-icon>
-      <ion-icon name="logo-facebook" class="icon"></ion-icon>
-      <ion-icon name="logo-twitter" class="icon"></ion-icon>
-     </div>
-    </div>
-   </div>
    <div class="container-models" id="main-models">
-    <img src="assets/clothes/models.jpeg" class="models-bg"/>
+    <img src="assets/product/clothes/models.jpeg" class="models-bg"/>
    </div>
    <div class="container-category">
-    <h1 class="title-category">CATEGORY</h1>
+    <h1 class="main-title">CATEGORY</h1>
     <div class="wrapper-category-items">
      <div class="wrapper-items">
       <div class="items">
-       <img src="assets/clothes/clothes1.jpg" class="items-image"/>
+       <img src="assets/product/clothes/clothes1.jpg" class="items-image"/>
       </div>
       <p class="name-items">Camisoles</p>
      </div>
      <div class="wrapper-items">
       <div class="items">
-       <img src="assets/clothes/clothes2.jpg" class="items-image"/>
+       <img src="assets/product/clothes/clothes2.jpg" class="items-image"/>
       </div>
       <p class="name-items">Tops</p>
      </div>
      <div class="wrapper-items">
       <div class="items">
-       <img src="assets/clothes/clothes3.jpg" class="items-image"/>
+       <img src="assets/product/clothes/clothes3.jpg" class="items-image"/>
       </div>
       <p class="name-items">Sweaters</p>
      </div>
      <div class="wrapper-items">
       <div class="items">
-       <img src="assets/clothes/clothes4.jpg" class="items-image"/>
+       <img src="assets/product/clothes/clothes4.jpg" class="items-image"/>
       </div>
       <p class="name-items">Shorts</p>
      </div>
      <div class="wrapper-items">
       <div class="items">
-       <img src="assets/clothes/clothes5.jpg" class="items-image"/>
+       <img src="assets/product/clothes/clothes5.jpg" class="items-image"/>
       </div>
       <p class="name-items">Sleeved</p>
      </div>
      <div class="wrapper-items">
       <div class="items">
-       <img src="assets/clothes/clothes6.jpg" class="items-image"/>
+       <img src="assets/product/clothes/clothes6.jpg" class="items-image"/>
       </div>
       <p class="name-items">Dresses</p>
      </div>
      <div class="wrapper-items">
       <div class="items">
-       <img src="assets/clothes/clothes7.jpg" class="items-image"/>
+       <img src="assets/product/clothes/clothes7.jpg" class="items-image"/>
       </div>
       <p class="name-items">Pants</p>
      </div>
@@ -121,55 +103,114 @@
     </div>
    </div>
    <div class="container-models">
-    <img src="assets/clothes/models2.jpeg" class="models-bg" id="models2"/>
+    <img src="assets/product/clothes/models2.jpeg" class="models-bg" id="models2"/>
    </div>
   <footer>
-   <div class="cta-btn">
+   <div class="cta-btn" onclick="handleSwitchPage('home')">
     <ion-icon name="home" class="icon"></ion-icon>
    </div>
-   <div class="cta-btn">
+   <div class="cta-btn" onclick="handleSwitchPage('category')">
     <ion-icon name="sparkles" class="icon"></ion-icon>
    </div>
-   <div class="cta-btn">
+   <div class="cta-btn" onclick="handleSwitchPage('notification')">
     <ion-icon name="notifications" class="icon"></ion-icon>
    </div>
-   <div class="cta-btn" onclick="openLoginPage()">
+   <div class="cta-btn" onclick="handleSwitchPage('signup')">
     <ion-icon name="person" class="icon"></ion-icon>
    </div>
   </footer>
   </div>
-  <script>
-   const loadingPage = document.querySelector('.loading-page');
-   const mainPage = document.querySelector('.main-page');
-   const optionPage = document.querySelector('.container-option-search');
-   const loginPage = document.querySelector('.container-page-login');
-   
-   const moreOption = document.getElementById('more-options');
-   
-   
-   function moreOptions() {
-    const isArrowBack = moreOption.name === 'arrow-back';
-    moreOption.name = isArrowBack ? 'ellipsis-vertical' : 'arrow-back';
+  <div class="container-page-login">
+   <div class="content-login">
+    <div class="box-brand">
+     <img src="assets/product/clothes/brand-nobg.png" class="brand-nobg"/>
+    </div>
+    <p class="login-sigin">Log In / Sign in</p>
+    <div class="wrapper-input-number">
+     <ion-icon name="call" class="icon"></ion-icon>
+     <input placeholder="Masuk dengan no ponsel" class="input-number"/>
+    </div>
+    <p class="login-sigin">atau login dengan yang lain</p>
+    <div class="box-other-login">
+     <ion-icon name="logo-google" class="icon"></ion-icon>
+     <ion-icon name="logo-facebook" class="icon"></ion-icon>
+     <ion-icon name="logo-twitter" class="icon"></ion-icon>
+    </div>
+   </div>
+  </div>
+  <div class="container-page-category">
+    <aside class="aside-category-list">
+     <div class="cta-category">
+      <div class="box-brand">
+       <img src="assets/product/clothes/brand-nobg.png" class="image"/>
+      </div>
+      <ion-icon class="icon" onclick="handleSwitchPage('default')" name="arrow-back"></ion-icon>
+     </div>
+     <div class="wrapper-category-list">
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+      <div class="items-list">
+       <p class="title-category">Cottagecore</p>
+      </div>
+     </div>
+    </aside>
+    <div class="content-items-category">
+     <div class="header-list-category">
+      <h2 class="main-title">CATEGORY</h2>
+      <div class="search">
+       <ion-icon class="icon" name="search"></ion-icon>
+       <input placeholder="Search Product" class="input" type="text"/>
+       <ion-icon class="icon" name="camera"></ion-icon>
+     </div>
+     </div>
+     <div class="wrapper-content-items">
+      <div class="items-product">
+       <div class="image-product">
+        <img src="assets/product/sell/product.jpeg" class="image"/>
+       </div>
+       <div class="name-product">Cottagecore Milk Maid Top</div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container-page-notifications">
     
-    optionPage.classList.toggle('active');
-   }
-   
-   
-   function openLoginPage() {
-    loginPage.classList.toggle('actives');
-    console.log(loginPage)
-   }
-   
-   
-   setTimeout(() => {
-     mainPage.style.visibility = "visible";
-     loadingPage.style.display = "none";
-    setTimeout(() => {
-     mainPage.style.opacity = "1";
-     loadingPage.style.opacity = "0";
-    }, 300);
-   }, 3500);
-  </script>
+   </div>
+  <script src="index.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
  </body>
