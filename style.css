@@ -532,7 +532,7 @@ footer {
 }
 
 .container-page-category .content-items-category .wrapper-content-items {
- gap: 35px 15px;
+ gap: 30px 15px;
  display: flex;
  flex-wrap: wrap;
  padding: 15px 0;
@@ -556,8 +556,8 @@ footer {
  width: 100px;
  height: 140px;
  display: flex;
+ align-items: start;
  flex-direction: column;
- justify-content: center;
 }
 
 .container-page-category .content-items-category .wrapper-content-items .items-product .name-product {
@@ -569,8 +569,8 @@ footer {
 
 .container-page-category .content-items-category .wrapper-content-items .image-product {
  position: relative;
- width: 100%;
- height: 100%;
+ width: 100px;
+ height: 100px;
  overflow: hidden;
  border-radius: 10px;
  background-color: var(--primary-white);
