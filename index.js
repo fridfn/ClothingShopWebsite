@@ -78,6 +78,7 @@ for (let i = 0; i <= amountProduct; i++) {
  
  
  imgProduct.src = `assets/product/sell/product${i}.jpeg`;
+ imgRecomendedProduct.src = `assets/product/sell/product${i}.jpeg`;
  
  nameProduct.textContent = arrayNameProduct[i] || 'Null';
  nameRecomendedProduct.textContent = arrayNameProduct[i] || 'Null';
