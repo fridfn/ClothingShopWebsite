@@ -587,7 +587,7 @@ footer {
 
 .container-page-notifications {
  gap: 15px;
- height: 100vh;
+ height: auto;
  display: none;
  visibility: hidden;
  flex-direction: column;
